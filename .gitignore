@@ -9,3 +9,5 @@
 
 # R project
 *.Rproj
+*.Rproj.user
+
