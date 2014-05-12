@@ -1,14 +1,16 @@
-fileUrl <- "https://data.baltimorecity.gov/api/views/dz54-2aru/rows.csv?accessType=DOWNLOAD"
+fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
 
 # R will make use of the ‘internet2.dll’ library for Internet access, 
 # which makes use of Internet Explorer functions
 setInternet2(use=TRUE)
 
-download.file(fileUrl, destfile="./data/cameras.csv", method="auto")
+download.file(fileUrl, destfile="./data/q1.csv", method="auto")
 
 list.files("./data")
 
-cameraData <- read.csv("./data/cameras.csv")
+q1 <- read.csv("./data/q1.csv")
+
+
 
 ####### EXCEL ######
 #library(xlsx)
@@ -27,7 +29,7 @@ cameraData <- read.xls(xls="./data/cameras.xlsx",sheet=1)
 ####### XML ######
 library(XML)
 
-fileUrl <- "http://www.w3schools.com/xml/simple.xml"
+fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml"
 
 doc <- xmlTreeParse(fileUrl,useInternal=TRUE)
 
