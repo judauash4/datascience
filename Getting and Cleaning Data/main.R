@@ -1,3 +1,5 @@
+####### CSV ######
+
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
 
 # R will make use of the ‘internet2.dll’ library for Internet access, 
@@ -13,9 +15,12 @@ q1 <- read.csv("./data/q1.csv")
 
 
 ####### EXCEL ######
-#library(xlsx)
-library(XLConnect)
-#library(gdata)
+# erase environment variable JAVA_HOME, so that rJava could start properly
+if(Sys.getenv("JAVA_HOME") != "") Sys.setenv("JAVA_HOME"="")
+
+library(xlsx) # requires java
+library(XLConnect) # requires java
+#library(gdata) # requires python
 
 fileUrl <- "https://data.baltimorecity.gov/api/views/dz54-2aru/rows.xlsx?accessType=DOWNLOAD"
 
