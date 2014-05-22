@@ -1,4 +1,5 @@
-#Create a special "matrix" object that can cache ists inverse.  
+# Create a special "matrix" object that can cache ists inverse.  
+# Input variable: numeric matrix
 makeCacheMatrix <- function(x = numeric()) {
   m <- NULL
   set <- function(y) {
@@ -12,8 +13,10 @@ makeCacheMatrix <- function(x = numeric()) {
        setinverse = setinverse,
        getinverse = getinverse)
 }
-#Computes the inverse of the special "matrix" returned by
-#makeCacheMatrix above
+# Computes the inverse of the special "matrix" returned by 
+# makeCacheMatrix above
+# Input variable: numeric matrix
+# Output variable: numeric inversion matrix
 cacheSolve <- function(x, ...) {
   inver <- x$getinverse()
   if(!is.null(inver)) {
