@@ -1,3 +1,4 @@
+# Created at 2014/5/22
 # Create a special "matrix" object that can cache ists inverse.  
 # Input variable: numeric matrix
 makeCacheMatrix <- function(x = numeric()) {
