@@ -24,11 +24,11 @@ library(XLConnect) # requires java
 
 fileUrl <- "https://data.baltimorecity.gov/api/views/dz54-2aru/rows.xlsx?accessType=DOWNLOAD"
 
-download.file(fileUrl, destfile="./data/cameras.xlsx", method="auto")
+download.file(fileUrl, destfile="./data/cameras.xlsx", method="auto", mode="wb")
 
 list.files("./data")
 
-cameraData <- read.xls(xls="./data/cameras.xlsx",sheet=1)
+cameraData <- read.xlsx("./data/cameras.xlsx",sheetIndex=1,header=TRUE)
 
 
 ####### XML ######
