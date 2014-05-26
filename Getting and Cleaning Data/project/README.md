@@ -3,12 +3,12 @@ README For 'run_analysis.R'
 The following is the code structure for 'run_analysis.R', you can also find the same description inside the file.
 -----------------------------
 
-+read in the column names for the data
++ read in the column names for the data
 
 ### 1.Merges the training and the test sets to create one data set.
-+read in the test_set
-+read in the train datasets
-+merge the test and train datasets by row
++ read in the test_set
++ read in the train datasets
++ merge the test and train datasets by row
 
 ### 2.Extracts only the measurements on the mean and standard deviation for each measurement.
 
