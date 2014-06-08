@@ -1,20 +1,10 @@
-library(datasets)
-data(iris)
+require(stats)
 
-temp <- aggregate(x=iris[,1:4],
-                  by=list(species=iris$Species),
-                  FUN=mean,
-                  na.rm=TRUE)
+names(warpbreaks)
 
-temp2 <- apply(iris[, 1:4], 2, mean)
+head(warpbreaks)
 
+# select mean(breaks) from warpbreaks group by tension
+aggregate(warpbreaks$breaks,list(tension=warpbreaks$tension),mean)
 
-library(datasets)
-data(mtcars)
-
-temp3 <- sapply(split(mtcars$mpg, mtcars$cyl), mean)
-temp4 <- sapply(split(mtcars$hp, mtcars$cyl), mean)
-abs(temp4["4"]-temp4["8"])
-
-
-
+tapply(warpbreaks$breaks,list(tension=warpbreaks$tension),mean)
