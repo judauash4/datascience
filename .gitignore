@@ -11,3 +11,10 @@
 *.Rproj
 *.Rproj.user
 
+*.out
+
+*.zip
+*.rar
+*.rds
+
+C:\Users\6121\Documents\GitHub\datascience\R Programming\assignment3\*.*
